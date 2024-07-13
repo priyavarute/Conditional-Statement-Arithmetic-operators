@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conditional Statement</title>
+</head>
+<body>
+
+    <button onclick="Calculate()">Try it</button>
+    <p Id="p1"></p>
+    <p Id="p2"></p>
+    <p Id="p3"></p>
+    <p Id="p4"></p>
+
+    <script>
+
+        function Calculate(){
+            var num1 = parseInt(window.prompt("Enter 1st number"));
+            var num2 = parseInt(window.prompt("Enter 2nd number"));
+
+            var operation = window.prompt("Select any one option from following : \n add \n sub \n Div \n Multi");
+            var result;
+
+            document.getElementById("p1").innerHTML="First Number Is :" + num1;
+            document.getElementById("p2").innerHTML="Second Number Is :" + num2;
+            document.getElementById("p3").innerHTML="Operation to Perform :" + operation;
+            
+
+            if (operation === "add") {
+                result = num1 + num2;
+                document.getElementById("p4").innerHTML="Answer is:" + result;
+
+            } else if (operation === "sub") {
+                result = num1 - num2;
+                document.getElementById("p4").innerHTML="Answer is:" + result;
+
+            }else if (operation === "Multi") {
+                result = num1 * num2;
+                document.getElementById("p4").innerHTML="Answer is:" + result;
+            }
+            else if (operation === "Div") {
+                result = num1 / num2;
+                document.getElementById("p4").innerHTML="Answer is:" + result;
+            }
+             else {
+                alert("Invalid operation. Please enter 'addition' or 'subtraction'.");
+                return;
+            }
+           
+        }
+
+    </script>
+</body>
+</html>
